@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dice by Dan Stankiewicz</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+</head>
+
+<body>
+
+<div class="container">
+<h1>Dice Game</h1>
+<hr>
+<img src="https://uchicago.s3.amazonaws.com/d0<%= @d1.to_s() %>.png">
+<img src="https://uchicago.s3.amazonaws.com/d0<%= @d2.to_s() %>.png">
+
+<% if @first_move == 'true' %>
+<h2>Your goal is now <%=@goal%>.</h2>
+<h3> Now try to get a <%=@goal%> again before you roll a 7.</h3>
+<% end %>
+
+<p>
+<button  class="btn-lg btn-primary btn-success"onclick="location.href='/dice/roll?goal=<%=@goal%>'">Roll the dice</button>
+</p>
+
+</div>
+
+</body>
+
+</html>

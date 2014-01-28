@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dice by Dan Stankiewicz</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+</head>
+
+<body>
+<div class="container">
+<h1>Dice Game</h1>
+<hr>
+
+<h2>Welcome.</h2>
+<p>Here are the rules:</p>
+<ul>
+	<li>Roll the dice to start the game.</li>
+	<li>If your first roll is a 7 or 11, you win.</li>
+	<li>If your first roll is a 2, 3, or 12, you lose.</li>
+	<li>Anything else becomes your <i>goal</i>.  Roll your goal again before rolling a 7, and you win.  Roll a 7 instead of your goal, and you lose.</li>
+</ul>
+
+<button  class="btn-lg btn-primary btn-success" onclick="location.href='/dice/roll?goal=<%=@goal%>&firstmove=<%=@first_move%>'">
+Roll to start the game!
+</button>
+</div>
+
+</body>
+
+</html>
